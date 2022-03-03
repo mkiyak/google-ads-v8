@@ -46,7 +46,7 @@ class GoogleAdsAPI
     public static function customer(GoogleAdsClient $googleAdsClient, $customerId, $during = "", $options = [], $orderBy = "", $limit = 10000) // Müşteriye ait toplam tıklanma, maliyet vs verileri döndürür
     {
         $response = [];
-//        try {
+        try {
             $fields = [
                 'metrics.average_cost',
                 'metrics.average_cpc',
@@ -64,12 +64,11 @@ class GoogleAdsAPI
             $where = implode(" AND ", $options);
 
             $query = self::select("customer", $fields, $where, $orderBy, $limit);
-//            dd($query);
             $response = self::showReportAction($googleAdsClient, $customerId, $query);
 
-//        } catch (\Exception $e) {
-//
-//        }
+        } catch (\Exception $e) {
+
+        }
         return $response;
     }
 
