@@ -3,12 +3,12 @@
 Repo içerisinde google ads apisi için kendime özel fonksiyonlar ürettim.
 
 
-### **Google ADS API Composer**
+### **Google ADS PHP API Composer**
 ```
 composer require googleads/google-ads-php
 ```
 
-### ** Fonksiyon Açıkmaları**
+### **Fonksiyon Açıkmaları**
 
 #### **- showReportAction()**
 ```
